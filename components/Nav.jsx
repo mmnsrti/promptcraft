@@ -17,7 +17,6 @@ const Nav = () => {
 
     fetchData();
   }, []);
-
   return (
     <nav className="flex-between w-full mb-16 pt-3">
       <Link href="/" className="flex gap-2">
@@ -29,12 +28,10 @@ const Nav = () => {
         />
         <p className="logo_text">Prmt</p>
       </Link>
-      <div className="sm:flex hidden">
+      {/* <div className="sm:flex hidden">
         {session?.user ? (
-          <div className="flex gap-3 md:gap-5">
-            <Link href="/create-prompt" className="black_btn">
-              Create Prompt
-            </Link>
+          <div className="">
+           
             <button className="outline_btn" onClick={signOut}>
               Sign Out
             </button>
@@ -63,10 +60,10 @@ const Nav = () => {
               ))}
           </>
         )}
-      </div>
-      <div className="sm:hidden flex relative">
+      </div> */}
+      <div className="flex relative">
         {session?.user ? (
-          <div className="flex">
+          <div className="flex gap-3 md:gap-5">
             <Image
               src={session?.user.image}
               width={30}
@@ -78,15 +75,10 @@ const Nav = () => {
             {toggleDropDown && (
               <div className="dropdown">
                 <Link href="/profile" className="dropdown_link">
+                
                   profile
                 </Link>
-                <Link
-                  href="/create-prompt"
-                  className="dropdown_link"
-                  onClick={() => setToggleDropDown(false)}
-                >
-                  Create Prompt
-                </Link>
+
                 <button
                   className=" mt-3 w-full black_btn"
                   type="button"
@@ -99,6 +91,9 @@ const Nav = () => {
                 </button>
               </div>
             )}
+            <Link href="/create-prompt" className="black_btn">
+              Create Prompt
+            </Link>
           </div>
         ) : (
           <>

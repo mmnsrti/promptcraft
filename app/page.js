@@ -1,6 +1,4 @@
 import Feed from '@components/Feed'
-import Profile from '@components/Profile'
-import PromptCard from '@components/PromptCard'
 
 
 export default function Home() {

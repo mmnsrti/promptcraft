@@ -141,7 +141,18 @@
 }
 
 .dropdown {
-  @apply absolute right-0 top-full mt-3 w-full p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-2 justify-end items-end;
+  @apply absolute right-0 top-full mt-5 w-full p-7 rounded-lg bg-white min-w-[300px]  flex flex-col gap-2 justify-start items-start;
+
+  @media (max-width: 640px) {
+    min-width: 220px;
+  }
+
+  @media (max-width: 1024px) {
+    min-width: 250px;
+  }}
+
+.dropdown_link:hover {
+  background-color: red; /* Replace "red" with the desired color */
 }
 
 .dropdown_link {

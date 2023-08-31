@@ -15,7 +15,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
       >
         <label>
           <span className="font-satoshi font-semibold text-base text-gray-700">
-            create your prompt
+            {type} your prompt
           </span>
           <textarea
             className="form_textarea"
@@ -30,7 +30,6 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         <label>
           <span className="font-satoshi font-semibold text-base text-gray-700">
             Tag
-            <span></span>
           </span>
           <input
             className="form_input"
