@@ -5,10 +5,10 @@ const PromptSchema = new Schema ({
         type: String,
         required: [true,'Prompt is required'],
     },
-    tag: {
+    tag: [{
         type: String,
         required: [true,'Tag is required'],
-    },
+    }],
     creator: {
         type: Schema.Types.ObjectId,
         ref:'User'

@@ -13,10 +13,13 @@ const Page = () => {
     prompt: "",
     tag: "",
   });
+  const formattedTags = post.tag.replace(/\s+/g, '').split(',');
   const createPrompt = async (e) => {
     e.preventDefault();
     try {
       setSubmitting(true);
+
+
       const response = await fetch("/api/prompt/new", {
         method: "POST",
         headers: {
@@ -25,21 +28,20 @@ const Page = () => {
         body: JSON.stringify({
           prompt: post.prompt,
           userId: session?.user.id,
-          tag: post.tag,
+          tag: formattedTags, // Send the array of formatted tags to the backend
         }),
       });
+
       if (response.ok) {
         router.push("/");
       }
-   
     } catch (error) {
       console.log(error);
-      setSubmitting(false);
-      return;
-    }finally{
+    } finally {
       setSubmitting(false);
     }
   };
+
   return (
     <Form
       type="Create"

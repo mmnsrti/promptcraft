@@ -22,7 +22,6 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   return (
     <div className="prompt_card">
       <div className="flex justify-between items-start gap-5">
-      
         <div className="flex-1 flex justify-start items-center gap-3 cursor-pointer">
           <Image
             src={post.creator.image}
@@ -55,11 +54,16 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
         </div>
       </div>
       <p className="my-4 font-satoshi text-sm text-gray-600">{post.prompt}</p>
-      <p
-        className="font-inter text-sm blue_gradient cursor-pointer"
-        onClick={() => handleTagClick && handleTagClick(post.prompt)}
-      >
-        {post.tag}
+      <p className="font-inter text-sm blue_gradient flex flex-row space-x-1">
+        {post.tag.map((tag) => (
+          <div
+            className="mr-2 cursor-pointer"
+            key={tag}
+            onClick={() => handleTagClick && handleTagClick(tag)}
+          >
+            #{tag}
+          </div>
+        ))}
       </p>
       {session?.user.id === post.creator._id && pathName === "/profile" && (
         <div className="flex-center mt-5 border-t border-gray-150 pt-3  gap-8">

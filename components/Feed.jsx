@@ -4,7 +4,7 @@ import PromptCard from "./PromptCard";
 
 const PromptCardList = ({ data, handleTagClick }) => {
   return (
-    <div className='mt-16 prompt_layout'>
+    <div className="mt-16 prompt_layout">
       {data.map((post) => (
         <PromptCard
           key={post._id}
@@ -16,23 +16,43 @@ const PromptCardList = ({ data, handleTagClick }) => {
   );
 };
 
-
 const Feed = () => {
   const [searchText, setSearchText] = useState("");
   const [post, setPost] = useState([]);
+  const [error, setError] = useState(null); // State to hold error
 
   useEffect(() => {
     const fetchPost = async () => {
-      const response = await fetch("/api/prompt");
+      let apiUrl = "/api/prompt"; // Default API URL
+      if (searchText.trim() !== "") {
+        // Check if the search term is not empty
+        apiUrl = `/api/search/${searchText}`; // Use the search API URL
+      }
+
+      const response = await fetch(apiUrl);
+
+      if (!response.ok) {
+        // Handle non-OK responses (e.g., 404)
+        setError("No results found."); // Set error message
+        setPost([]); // Clear the post data
+        return;
+      }
+
       const data = await response.json();
       setPost(data);
+      setError(null); // Clear any previous errors
     };
+
     fetchPost();
-  }, []);
+  }, [searchText]); // Trigger the effect when searchText changes
 
   const handleSearchTextChange = (event) => {
     setSearchText(event.target.value);
-  }
+  };
+
+  const handleTagClick = (tag) => {
+    setSearchText(tag);
+  };
 
   return (
     <section className="feed">
@@ -45,7 +65,11 @@ const Feed = () => {
           onChange={handleSearchTextChange}
         />
       </form>
-      <PromptCardList data={post} handleTagClick={()=>{}} />
+      {error ? (
+        <p className="text-red-500">{error}</p> // Display error message if there's an error
+      ) : (
+        <PromptCardList data={post} handleTagClick={handleTagClick} />
+      )}
     </section>
   );
 };
