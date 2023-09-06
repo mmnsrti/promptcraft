@@ -37,7 +37,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
             onChange={(e) => {
               setPost({ ...post, tag: e.target.value });
             }}
-            placeholder="please separate your tags with , like product,webdevelopment,idea"
+            placeholder="please separate your tags with , or # like product,webdevelopment,idea"
             required
           />
         </label>

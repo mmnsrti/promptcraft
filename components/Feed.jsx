@@ -56,21 +56,23 @@ const Feed = () => {
 
   return (
     <section className="feed">
-      <form className="relative w-full flex-center">
-        <input
-          type="text"
-          className="w-full rounded-full border-2 border-gray-300 p-2 peer"
-          placeholder="What's on your mind?"
-          value={searchText}
-          onChange={handleSearchTextChange}
-        />
-      </form>
-      {error ? (
-        <p className="text-red-500">{error}</p> // Display error message if there's an error
-      ) : (
-        <PromptCardList data={post} handleTagClick={handleTagClick} />
-      )}
-    </section>
+    <form className="relative w-full flex-center">
+      <input
+        type="text"
+        className="w-full rounded-full border-2 border-gray-300 p-2 peer"
+        placeholder="What's on your mind?"
+        value={searchText}
+        onChange={handleSearchTextChange}
+      />
+    </form>
+    {error ? (
+      <p className="text-red-500">{error}</p> // Display error message if there's an error
+    ) : post.length === 0 ? (
+      <p className="text-gray-500">Be the first to post.</p> // Display a message when there are no posts
+    ) : (
+      <PromptCardList data={post} handleTagClick={handleTagClick} />
+    )}
+  </section>
   );
 };
 
