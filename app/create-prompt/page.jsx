@@ -6,19 +6,20 @@ import { useRouter } from "next/navigation";
 import Form from "@components/Form";
 
 const Page = () => {
-  const router=useRouter()
-  const {data:session} =useSession()
+  const router = useRouter();
+  const { data: session } = useSession();
   const [submitting, setSubmitting] = useState(false);
   const [post, setPost] = useState({
     prompt: "",
     tag: "",
   });
-  const formattedTags = post.tag.replace(/\s+/g, '').split(',');
+  const formattedTag = post.tag.replace(/#/g, ",");
+  const formattedTags = formattedTag.split(',').map(tag => tag.trim()).filter(tag => tag); // Remove empty and whitespace-only tags
+
   const createPrompt = async (e) => {
     e.preventDefault();
     try {
       setSubmitting(true);
-
 
       const response = await fetch("/api/prompt/new", {
         method: "POST",
