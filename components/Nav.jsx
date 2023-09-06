@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
+import { BsStar } from "react-icons/bs";
 
 const Nav = () => {
   const { data: session } = useSession();
@@ -16,6 +17,22 @@ const Nav = () => {
     };
 
     fetchData();
+  }, []);
+  const dropdownRef = useRef(null);
+  useEffect(() => {
+    // Add event listener to detect clicks outside the dropdown
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setToggleDropDown(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      // Clean up the event listener when the component unmounts
+      document.removeEventListener("click", handleClickOutside);
+    };
   }, []);
   return (
     <nav className="flex-between w-full mb-16 pt-3">
@@ -61,21 +78,12 @@ const Nav = () => {
           </>
         )}
       </div> */}
-      <div className="flex relative">
+      <div className="flex relative cursor-pointer" ref={dropdownRef}>
         {session?.user ? (
-          <div className="flex gap-3 md:gap-5">
-            <Image
-              src={session?.user.image}
-              width={30}
-              height={30}
-              alt="profile"
-              className="rounded-full"
-              onClick={() => setToggleDropDown((prev) => !prev)}
-            />
+          <div className="flex gap-3 md:gap-5 ">
             {toggleDropDown && (
               <div className="dropdown">
-                <Link href="/profile" className="dropdown_link">
-                
+                <Link href="/profile" className="dropdown_link  w-full">
                   profile
                 </Link>
 
@@ -91,9 +99,20 @@ const Nav = () => {
                 </button>
               </div>
             )}
+            <Link href="/liked" className=" rounded-full border border-black bg-black py-1.5 px-2 text-white transition-all hover:bg-white hover:text-black text-center text-sm font-inter flex items-center justify-center;">
+              <BsStar />
+            </Link>
             <Link href="/create-prompt" className="black_btn">
               Create Prompt
             </Link>
+            <Image
+              src={session?.user.image}
+              width={30}
+              height={30}
+              alt="profile"
+              className="rounded-full"
+              onClick={() => setToggleDropDown((prev) => !prev)}
+            />
           </div>
         ) : (
           <>

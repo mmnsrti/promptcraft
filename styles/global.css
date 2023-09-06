@@ -151,12 +151,9 @@
     min-width: 250px;
   }}
 
-.dropdown_link:hover {
-  background-color: red; /* Replace "red" with the desired color */
-}
 
 .dropdown_link {
-  @apply text-sm font-inter text-gray-700 hover:text-gray-500 font-medium;
+  @apply rounded-full border border-x-neutral-500 bg-white py-1.5 px-5 text-black transition-all hover:bg-black hover:text-white text-center text-sm font-inter flex items-center justify-center;
 }
 
 /* PromptCard Component */
