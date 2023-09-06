@@ -16,7 +16,8 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [liked, setLiked] = useState([]);
   const [loadingLike, setLoadingLike] = useState(false); // Track loading state
-
+  const [showAllTags, setShowAllTags] = useState(false);
+  const [showAllPrompts, setShowAllPrompts] = useState(false);
   const handleStarHover = () => {
     setIsHovered(true);
   };
@@ -103,7 +104,15 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
     });
   };
   const isPostLiked = liked.includes(post._id);
+  const MAX_TAG_LENGTH = 2; // Define the maximum length for tags
+  const MAX_PROMPT_LENGTH = 100; // Define the maximum length for prompts
 
+  const toggleShowAllTags = () => {
+    setShowAllTags(!showAllTags);
+  };
+  const toggleShowAllPrompts = () => {
+    setShowAllPrompts(!showAllPrompts);
+  };
   return (
     <div className="prompt_card">
       <div className="flex justify-between items-start gap-5">
@@ -138,12 +147,19 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
           />
         </div>
       </div>
-      <p className="my-4 font-satoshi text-sm text-gray-600">{post.prompt}</p>
+      <p className="my-4 font-satoshi text-sm text-gray-600">
+        {showAllPrompts ? post.prompt : post.prompt.slice(0, MAX_PROMPT_LENGTH)}
+        {post.prompt.length > MAX_PROMPT_LENGTH && (
+          <span className="cursor-pointer text-blue-500" onClick={toggleShowAllPrompts}>
+            {showAllPrompts ? "Show less..." : "Show more..."}
+          </span>
+        )}
+      </p>
       <div className="flex items-center justify-between">
         {" "}
         {/* Wrap tags and star button */}
-        <p className="font-inter text-sm blue_gradient flex flex-row space-x-1">
-          {post.tag.map((tag) => (
+        <p className="font-inter text-sm blue_gradient flex flex-col space-y-1">
+          {(showAllTags ? post.tag : post.tag.slice(0, MAX_TAG_LENGTH)).map((tag) => (
             <div
               className="mr-2 cursor-pointer"
               key={tag}
@@ -152,6 +168,11 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
               #{tag}
             </div>
           ))}
+          {post.tag.length > MAX_TAG_LENGTH && (
+            <span className="cursor-pointer text-blue-500" onClick={toggleShowAllTags}>
+              {showAllTags ? "Show less..." : "Show more..."}
+            </span>
+          )}
         </p>
         {session?.user ? (
           <div

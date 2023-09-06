@@ -4,7 +4,7 @@ const Profile = ({ name, data, handleEdit, handleDelete }) => {
   return (
     <section className="w-full">
       <h1 className="head_text text-left mb-3">
-        <span className="blue_gradient">{name}'s Profile</span>
+        <span className="blue_gradient">My Profile</span>
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {data.map((post) => (
