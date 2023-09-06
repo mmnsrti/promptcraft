@@ -38,12 +38,12 @@ const Nav = () => {
     <nav className="flex-between w-full mb-16 pt-3">
       <Link href="/" className="flex gap-2">
         <Image
-          src="/assets/images/logo.svg"
-          width={50}
-          height={50}
+          src="/assets/images/ideogram.png"
+          width={30}
+          height={80}
           alt="logo"
         />
-        <p className="logo_text">Prmt</p>
+        <p className="logo_text">PromptCraft</p>
       </Link>
       {/* <div className="sm:flex hidden">
         {session?.user ? (
