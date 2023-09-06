@@ -1,4 +1,6 @@
-import { useState,useEffect } from "react";
+"use client";
+
+import { useState, useEffect ,useCallback } from "react";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -12,13 +14,17 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   const searchParams = useSearchParams();
   const promptId = searchParams.get("id");
   const [isHovered, setIsHovered] = useState(false);
-  const [liked, setLiked] = useState(false);
+  const [liked, setLiked] = useState([]);
+  const [loadingLike, setLoadingLike] = useState(false); // Track loading state
+
   const handleStarHover = () => {
     setIsHovered(true);
   };
   const handleLike = async (post) => {
     // e.preventDefault();
+    if (loadingLike) return; // Prevent multiple requests while loading
 
+    setLoadingLike(true);
     try {
       const response = await fetch(`/api/liked/${session?.user.id}/post`, {
         method: "POST",
@@ -30,42 +36,60 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
 
       if (response.ok) {
         // If the response indicates success, toggle the liked state
-        setLiked((prevLiked) => !prevLiked);
-
+        if (liked.includes(post._id)) {
+          // If post is already liked, remove it from the liked array
+          setLiked((prevLiked) => prevLiked.filter((id) => id !== post._id));
+        } else {
+          // If post is not liked, add it to the liked array
+          setLiked((prevLiked) => [...prevLiked, post._id]);
+        }
         // Optionally, you can update the number of likes in the UI
         // and perform any other actions you want to take
       } else {
       }
     } catch (error) {
       // Handle network or other errors
+    }finally {
+      setLoadingLike(false);
     }
   };
   useEffect(() => {
     const checkLikedStatus = async () => {
       try {
-        const response = await fetch(`/api/liked/${session?.user.id}/check`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          }, 
-          body: JSON.stringify({ promptId: post._id }), // Send the prompt ID
-        });
-
-        if (response.ok) {
-          const { liked } = await response.json();
-          setLiked(liked);
-        } else {
-          // Handle error if needed
+        if (session) {
+          // Check if you already have the liked data in your local state
+          if (liked.length === 0) {
+            const response = await fetch(`/api/liked/${session?.user.id}/post`, {
+              method: "GET",
+              headers: {
+                "Content-Type": "application/json",
+              },
+            });
+  
+            if (response.ok) {
+              const likedPosts = await response.json();
+              const likedPostIds = likedPosts.map((post) => post._id);
+              setLiked(likedPostIds);
+              console.log(liked);
+            } else {
+              // Handle error if needed
+            }
+          }
         }
       } catch (error) {
         // Handle network or other errors
       }
     };
+  
+    checkLikedStatus(); // Call the function immediately when the component mounts
+  
+    // You may want to add session as a dependency if it's used within the callback
+    // useEffect(() => {
+    //   checkLikedStatus();
+    // }, [session]);
+  
+  }, []); 
 
-    if (session) {
-      checkLikedStatus();
-    }
-  }, [session, post._id]);
   const handleStarLeave = () => {
     setIsHovered(false);
   };
@@ -78,6 +102,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
       }, 2000);
     });
   };
+  const isPostLiked = liked.includes(post._id);
 
   return (
     <div className="prompt_card">
@@ -128,16 +153,20 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
             </div>
           ))}
         </p>
-        <div
-          onClick={() => handleLike(post)}
-          onMouseEnter={handleStarHover}
-          onMouseLeave={handleStarLeave}
-          className={`ml-5 cursor-pointer ${
-            isHovered ? "text-gold-500" : "text-gray-500"
-          }`}
-        >
-          {liked ? <BsStarFill /> : <BsStar />}
-        </div>
+        {session?.user ? (
+          <div
+            onClick={() => handleLike(post)}
+            onMouseEnter={handleStarHover}
+            onMouseLeave={handleStarLeave}
+            className={`ml-5 cursor-pointer ${
+              isHovered ? "text-gold-500" : "text-gray-500"
+            }`}
+          >
+            {isPostLiked ? <BsStarFill /> : <BsStar />}{" "}
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
       {session?.user.id === post.creator._id && pathName === "/profile" && (
         <div className="flex-center mt-5 border-t border-gray-150 pt-3 gap-8">

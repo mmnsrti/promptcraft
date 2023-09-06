@@ -33,12 +33,10 @@ export const POST = async (request, { params }) => {
 
     // Save the updated user object to update the likes
     await user.save();
-    console.log(promptId);
-    console.log(user.likes);
-    console.log(user);
+   
 
     // Return the updated user object as a response
-    return new Response(JSON.stringify(user), { status: 200 });
+    return new Response(JSON.stringify({ likes: user.likes }), { status: 200 });
   } catch (error) {
     console.error(error);
     return new Response("Failed to like/unlike the prompt", { status: 500 });
@@ -59,7 +57,6 @@ export const GET = async (request, { params }) => {
 
     // Find the liked posts in the 'Prompt' collection using Mongoose
     const likedPosts = await Prompt.find({ _id: { $in: likedPostIds } });
-
     // Return the list of liked posts as a response
     return new Response(JSON.stringify(likedPosts), { status: 200 });
   } catch (error) {
