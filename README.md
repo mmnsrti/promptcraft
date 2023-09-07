@@ -1,170 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PromptCraft - AI-Powered Prompt Generator</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
-    }
+<p align="center">
+  <img src="public/assets/images/ideogram.png" alt="PromptCraft Logo" width="200" />
+</p>
 
-    header {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
+<h1 align="center">PromptCraft - AI-Powered Prompt Generator</h1>
 
-    header a {
-      color: #61dafb;
-      text-decoration: none;
-    }
+<p align="center">Unleash Creativity with AI-Generated Prompts</p>
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+<p align="center">
+  <a href="promptcraft.netlify.app/" target="_blank">
+    🚀 Live Demo
+  </a>
+  •
+  <a href="#features">
+    ✨ Features
+  </a>
+  •
+  <a href="#getting-started">
+    🛠️ Getting Started
+  </a>
+  •
+  <a href="#technologies-used">
+    🛡️ Technologies Used
+  </a>
+  •
+  <a href="#contributing">
+    🤝 Contributing
+  </a>
+  •
+  <a href="#Acknowledgments">
+    🙏 Acknowledgments
+  </a>
+</p>
 
-    h1 {
-      text-align: center;
-      font-size: 2.5rem;
-    }
+![PromptCraft Screenshot](/public/assets/images/)
 
-    h2 {
-      font-size: 1.5rem;
-      margin-top: 20px;
-    }
+## ✨ Features
 
-    p {
-      font-size: 1.2rem;
-    }
+- **Create Inspiring Prompts**: Effortlessly craft captivating prompts that fuel creative AI projects.
+- **Discover & Share**: Explore an extensive library of prompts shared by a vibrant community.
+- **Effortless Sign-In**: Seamlessly log in via Google for a personalized PromptCraft experience.
+- **Robust Backend**: The MongoDB backend ensures secure data storage and limitless scalability.
+- **Stunning UI**: Tailwind CSS powers a visually stunning and responsive user interface.
 
-    ul {
-      list-style: none;
-    }
+## 🛠️ Getting Started
 
-    ul li {
-      margin-bottom: 10px;
-    }
+To run PromptCraft locally, follow these simple steps:
 
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
+1. **Clone this Repository**:
 
-    a:hover {
-      text-decoration: underline;
-    }
+   ```bash
+   git clone https://github.com/your-username/promptcraft.git
+1.Install Dependencies:
 
-    .badges {
-      text-align: center;
-    }
+cd promptcraft
+npm install
 
-    .badges a {
-      display: inline-block;
-      margin: 5px;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-    }
+2.Configure Environment Variables:
 
-    .badges a:hover {
-      background-color: #0056b3;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <a href="promptcraft.netlify.app/" target="_blank">
-      <h1>PromptCraft - AI-Powered Prompt Generator</h1>
-    </a>
-    <p>Unleash Creativity with AI-Generated Prompts</p>
-  </header>
+3.Create a .env.local file in the project root and add your MongoDB URI and Google OAuth credentials:
+GOOGLE_ID=
+GOOGLE_CLIENT_SECRET=
+MONGO_URI=
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_URL_INTERNAL=http://localhost:3000
+NEXTAUTH_SECRET=
 
-  <div class="container">
-    <h2>✨ Features</h2>
-    <ul>
-      <li><strong>Create Inspiring Prompts:</strong> Effortlessly craft captivating prompts that fuel creative AI projects.</li>
-      <li><strong>Discover & Share:</strong> Explore an extensive library of prompts shared by a vibrant community.</li>
-      <li><strong>Effortless Sign-In:</strong> Seamlessly log in via Google for a personalized PromptCraft experience.</li>
-      <li><strong>Robust Backend:</strong> The MongoDB backend ensures secure data storage and limitless scalability.</li>
-      <li><strong>Stunning UI:</strong> Tailwind CSS powers a visually stunning and responsive user interface.</li>
-    </ul>
+4.Start the Development Server:
+npm run dev
 
-    <h2>🛠️ Getting Started</h2>
-    <ol>
-      <li><strong>Clone this Repository:</strong></li>
-      <pre><code>git clone https://github.com/your-username/promptcraft.git</code></pre>
 
-      <li><strong>Install Dependencies:</strong></li>
-      <pre><code>cd promptcraft</code></pre>
-      <pre><code>npm install</code></pre>
+## 🛡️ technologies-used
+Next.js: The foundation of our project, delivering a fast and efficient React framework.
+MongoDB: Our database of choice for prompt storage and management.
+Tailwind CSS: A utility-first CSS framework for crafting a stylish and responsive UI.
 
-      <li><strong>Configure Environment Variables:</strong></li>
-      <pre><code>Create a <code>.env.local</code> file in the project root and add your MongoDB URI and Google OAuth credentials:</pre></code>
-      <pre><code>MONGODB_URI=your-mongodb-uri</pre></code>
-      <pre><code>GOOGLE_CLIENT_ID=your-google-client-id</pre></code>
-      <pre><code>GOOGLE_CLIENT_SECRET=your-google-client-secret</pre></code>
+## 🤝 contributing
+We enthusiastically welcome contributions from the community! If you're eager to contribute to PromptCraft, please read our Contributing Guidelines.
 
-      <li><strong>Start the Development Server:</strong></li>
-      <pre><code>npm run dev</code></pre>
 
-      <li><strong>Access PromptCraft:</strong></li>
-      <pre><code>Open your web browser and access PromptCraft at <a href="http://localhost:3000">http://localhost:3000</a>.</pre></code>
-    </ol>
+## 🙏 Acknowledgments
 
-    <h2>🛡️ Technologies Used</h2>
-    <ul>
-      <li><strong>Next.js:</strong> The foundation of our project, delivering a fast and efficient React framework.</li>
-      <li><strong>MongoDB:</strong> Our database of choice for prompt storage and management.</li>
-      <li><strong>Tailwind CSS:</strong> A utility-first CSS framework for crafting a stylish and responsive UI.</li>
-    </ul>
+Our heartfelt gratitude to the vibrant open-source community for providing the tools and libraries that empower this project.
+Inspired by the limitless creative potential unlocked by AI-generated prompts.
+Crafted with ❤️ by mmnsrti 
+For additional information, visit the PromptCraft GitHub repository.
 
-    <h2>🤝 Contributing</h2>
-    <p>We enthusiastically welcome contributions from the community! If you're eager to contribute to PromptCraft, please read our <a href="CONTRIBUTING.md">Contributing Guidelines</a>.</p>
-
-    <h2>📝 License</h2>
-    <p>This project is licensed under the MIT License. For more details, refer to the <a href="LICENSE">LICENSE</a> file.</p>
-
-    <h2>🙏 Acknowledgments</h2>
-    <p>Our heartfelt gratitude to the vibrant open-source community for providing the tools and libraries that empower this project.</p>
-    <p>Inspired by the limitless creative potential unlocked by AI-generated prompts.</p>
-
-    <p><em>Crafted with ❤️ by Your Name</em></p>
-
-    <p>For additional information, visit <a href="https://github.com/your-username/promptcraft">the PromptCraft GitHub repository</a>.</p>
-  </div>
-
-  <div class="badges">
-    <a href="promptcraft.netlify.app/" target="_blank">
-      <img src="https://img.shields.io/badge/Live%20Demo-%F0%9F%9A%80-brightgreen" alt="Live Demo" />
-    </a>
-    <a href="#features">
-      <img src="https://img.shields.io/badge/%E2%9C%A8-Features-yellow" alt="Features" />
-    </a>
-    <a href="#getting-started">
-      <img src="https://img.shields.io/badge/%F0%9F%9B%A0%EF%B8%8F-Getting%20Started-blue" alt="Getting Started" />
-    </a>
-    <a href="#technologies-used">
-      <img src="https://img.shields.io/badge/%F0%9F%9B%A1%EF%B8%8F-Technologies%20Used-orange" alt="Technologies Used" />
-    </a>
-    <a href="#contributing">
-      <img src="https://img.shields.io/badge/%F0%9F%A4%9D-Contributing-red" alt="Contributing" />
-    </a>
-    <a href="#license">
-      <img src="https://img.shields.io/badge/%F0%9F%93%9D-License-lightgrey" alt="License" />
-    </a>
-  </div>
-</body>
-</html>
