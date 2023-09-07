@@ -7,7 +7,7 @@
 <p align="center">Unleash Creativity with AI-Generated Prompts</p>
 
 <p align="center">
-  <a href="promptcraft.netlify.app/" target="_blank">
+  <a href="https://promptcraft.netlify.app/" target="_blank">
     🚀 Live Demo
   </a>
   •
