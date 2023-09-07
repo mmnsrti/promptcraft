@@ -58,7 +58,6 @@ PromptCraft is backed by a robust MongoDB database, ensuring the security and sc
 
 Tailwind CSS powers a visually stunning and responsive user interface, making your experience on PromptCraft a delight. Whether you're browsing prompts on a desktop, tablet, or smartphone, PromptCraft adapts effortlessly to your device. Enjoy a smooth and visually pleasing interface that enhances your creative journey.
 
-# Prompt Sharing App
 
 This is a prompt sharing web app built with Next.js, MongoDB, Tailwind CSS, and NextAuth for authentication.
 
