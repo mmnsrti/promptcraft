@@ -19,4 +19,38 @@ To run this project locally, follow these steps:
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/promptcraft.git
+   git clone https://github.com/mmnsrti/promptcraft.git
+   Install the project dependencies:
+
+bash
+Copy code
+cd promptcraft
+npm install
+
+Create a .env.local file in the project root and add your MongoDB URI and Google OAuth credentials:
+
+env
+Copy code
+MONGODB_URI=your-mongodb-uri
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+Run the development server:
+
+bash
+Copy code
+npm run dev
+Open http://localhost:3000 in your web browser to access the app.
+
+Technologies Used
+Next.js: The foundation of our project, providing a fast and efficient React framework.
+MongoDB: Our choice of database for storing and managing prompts.
+Tailwind CSS: A utility-first CSS framework for stylish and responsive UI design.
+Contributing
+We welcome contributions from the community! If you'd like to contribute to PromptCraft, please follow our Contributing Guidelines.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Acknowledgments
+Thanks to the open-source community for providing the tools and libraries that make this project possible.
+Inspired by the creativity and potential of AI-powered prompts.
