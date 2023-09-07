@@ -27,16 +27,14 @@
     🤝 Contributing
   </a>
   •
-  <a href="#Acknowledgments">
+  <a href="#acknowledgments">
     🙏 Acknowledgments
   </a>
 </p>
 
-![PromptCraft Screenshot](/public/assets/images/)
+![PromptCraft Screenshot](/public/assets/images/screenshot.png)
 
 ## ✨ Features
-
-
 
 ### 1. Unleash Your Creativity
 
@@ -57,9 +55,6 @@ PromptCraft is backed by a robust MongoDB database, ensuring the security and sc
 ### 5. Stunning & Responsive UI
 
 Tailwind CSS powers a visually stunning and responsive user interface, making your experience on PromptCraft a delight. Whether you're browsing prompts on a desktop, tablet, or smartphone, PromptCraft adapts effortlessly to your device. Enjoy a smooth and visually pleasing interface that enhances your creative journey.
-
-
-This is a prompt sharing web app built with Next.js, MongoDB, Tailwind CSS, and NextAuth for authentication.
 
 ## Features
 
@@ -98,8 +93,6 @@ Share prompts from the navbar or your profile page. Add tags to help categorize 
 - [MongoDB](https://www.mongodb.com/) - Database
 - [NextAuth](https://next-auth.js.org/) - Authentication
 
-
-
 ## 🛠️ Getting Started
 
 To run PromptCraft locally, follow these simple steps:
@@ -108,6 +101,10 @@ To run PromptCraft locally, follow these simple steps:
 
    ```bash
    git clone https://github.com/mmnsrti/promptcraft.git
+   cd promptcraft
+
+
+
 1.Install Dependencies:
 
 cd promptcraft
