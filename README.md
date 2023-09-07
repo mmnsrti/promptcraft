@@ -1,56 +1,37 @@
-# PromptCraft - AI-Powered Prompt Generator
+<h1 align="center">
+  <img src="/public/assets/images/ideogram.png" alt="PromptCraft Logo">
+  <br>
+  PromptCraft - AI-Powered Prompt Generator
+</h1>
 
-![PromptCraft Logo](/public/assets//images/ideogram.png)
+<p align="center">
+  <strong>Create, Share, and Explore Creative AI Prompts with Ease</strong>
+</p>
 
-Welcome to PromptCraft! This project is a collaborative effort to build an AI-powered prompt generator that allows you to create, share, like, and use prompts for various AI applications. With PromptCraft, you can unlock your creativity and generate prompts for AI image creation, text generation, and more.
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#getting-started">Getting Started</a> •
+  <a href="#technologies-used">Technologies Used</a> •
+  <a href="#contributing">Contributing</a> •
+  <a href="#license">License</a>
+</p>
+
+---
 
 ## Features
 
-- **Create Prompts**: Easily create creative and unique prompts that can be used for AI tasks.
-- **Share and Like**: Share your prompts with the community and discover popular prompts from others.
-- **Google Sign-In**: Seamlessly log in to PromptCraft using your Google account for a hassle-free experience.
-- **Database**: We use MongoDB to store and manage prompts, ensuring data integrity and scalability.
-- **Stylish UI**: Our user interface is designed with Tailwind CSS, making it visually appealing and responsive.
+- **Create and Share**: Effortlessly craft unique AI prompts and share them with the community.
+- **Google Sign-In**: Conveniently log in using your Google account for seamless access.
+- **Like and Discover**: Explore a variety of prompts, like your favorites, and find inspiration.
+- **Tailwind CSS Styling**: A polished and responsive user interface designed with Tailwind CSS.
+- **MongoDB Database**: Reliable data storage and management for prompt scalability.
+
+---
 
 ## Getting Started
 
-To run this project locally, follow these steps:
-
-1. Clone this repository to your local machine:
+1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/mmnsrti/promptcraft.git
-   Install the project dependencies:
-
-bash
-Copy code
-cd promptcraft
-npm install
-
-Create a .env.local file in the project root and add your MongoDB URI and Google OAuth credentials:
-
-env
-Copy code
-MONGODB_URI=your-mongodb-uri
-GOOGLE_CLIENT_ID=your-google-client-id
-GOOGLE_CLIENT_SECRET=your-google-client-secret
-Run the development server:
-
-bash
-Copy code
-npm run dev
-Open http://localhost:3000 in your web browser to access the app.
-
-Technologies Used
-Next.js: The foundation of our project, providing a fast and efficient React framework.
-MongoDB: Our choice of database for storing and managing prompts.
-Tailwind CSS: A utility-first CSS framework for stylish and responsive UI design.
-Contributing
-We welcome contributions from the community! If you'd like to contribute to PromptCraft, please follow our Contributing Guidelines.
-
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-Acknowledgments
-Thanks to the open-source community for providing the tools and libraries that make this project possible.
-Inspired by the creativity and potential of AI-powered prompts.
+   git clone https://github.com/your-username/promptcraft.git
+   cd promptcraft
