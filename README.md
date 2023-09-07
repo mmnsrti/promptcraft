@@ -7,32 +7,34 @@
 <p align="center">Unleash Creativity with AI-Generated Prompts</p>
 
 <p align="center">
-  <a href="https://your-project-url.com" target="_blank">
-    🚀 Live Demo
+  <a href="promptcraft.netlify.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Live%20Demo-%F0%9F%9A%80-brightgreen" alt="Live Demo" />
   </a>
   •
   <a href="#features">
-    ✨ Features
+    <img src="https://img.shields.io/badge/%E2%9C%A8-Features-yellow" alt="Features" />
   </a>
   •
   <a href="#getting-started">
-    🛠️ Getting Started
+    <img src="https://img.shields.io/badge/%F0%9F%9B%A0%EF%B8%8F-Getting%20Started-blue" alt="Getting Started" />
   </a>
   •
   <a href="#technologies-used">
-    🛡️ Technologies Used
+    <img src="https://img.shields.io/badge/%F0%9F%9B%A1%EF%B8%8F-Technologies%20Used-orange" alt="Technologies Used" />
   </a>
   •
   <a href="#contributing">
-    🤝 Contributing
+    <img src="https://img.shields.io/badge/%F0%9F%A4%9D-Contributing-red" alt="Contributing" />
   </a>
   •
   <a href="#license">
-    📝 License
+    <img src="https://img.shields.io/badge/%F0%9F%93%9D-License-lightgrey" alt="License" />
   </a>
 </p>
 
-![PromptCraft Screenshot](/public/screenshot.png)
+![PromptCraft Screenshot](/public/assets/images/)
+
+---
 
 ## ✨ Features
 
