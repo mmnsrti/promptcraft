@@ -49,7 +49,7 @@ To run PromptCraft locally, follow these simple steps:
 1. **Clone this Repository**:
 
    ```bash
-   git clone https://github.com/your-username/promptcraft.git
+   git clone https://github.com/mmnsrti/promptcraft.git
 1.Install Dependencies:
 
 cd promptcraft
