@@ -39,7 +39,7 @@ const Nav = () => {
       <Link href="/" className="flex gap-2">
         <Image
           src="/assets/images/ideogram.png"
-          width={30}
+          width={40}
           height={80}
           alt="logo"
         />
