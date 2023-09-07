@@ -58,6 +58,46 @@ PromptCraft is backed by a robust MongoDB database, ensuring the security and sc
 
 Tailwind CSS powers a visually stunning and responsive user interface, making your experience on PromptCraft a delight. Whether you're browsing prompts on a desktop, tablet, or smartphone, PromptCraft adapts effortlessly to your device. Enjoy a smooth and visually pleasing interface that enhances your creative journey.
 
+# Prompt Sharing App
+
+This is a prompt sharing web app built with Next.js, MongoDB, Tailwind CSS, and NextAuth for authentication.
+
+## Features
+
+- **Share Text Prompts**: Share text prompts and view prompts shared by others.
+- **Like and Unlike Prompts**: Interact with prompts by liking or unliking them.
+- **Tag Prompts**: Categorize prompts with relevant topics.
+- **User Profiles**: Manage your shared prompts and user profile.
+- **Login with Google**: Authenticate using your Google account with NextAuth.
+
+## Usage
+
+### Login
+
+Login using your Google account. This will create a user profile if one does not exist.
+
+### Home View
+
+The home page shows a feed of recently shared prompts. You can like or unlike prompts here.
+
+### Profile View
+
+Access your profile page from the navbar. Here you can:
+
+- View prompts you have shared
+- Edit or delete your own prompts
+- Share a new prompt
+
+### Sharing Prompts
+
+Share prompts from the navbar or your profile page. Add tags to help categorize your prompt.
+
+## Built With
+
+- [Next.js](https://nextjs.org/) - React framework
+- [Tailwind CSS](https://tailwindcss.com/) - For styling
+- [MongoDB](https://www.mongodb.com/) - Database
+- [NextAuth](https://next-auth.js.org/) - Authentication
 
 
 
