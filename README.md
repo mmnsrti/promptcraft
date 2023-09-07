@@ -56,7 +56,7 @@ PromptCraft is backed by a robust MongoDB database, ensuring the security and sc
 
 Tailwind CSS powers a visually stunning and responsive user interface, making your experience on PromptCraft a delight. Whether you're browsing prompts on a desktop, tablet, or smartphone, PromptCraft adapts effortlessly to your device. Enjoy a smooth and visually pleasing interface that enhances your creative journey.
 
-## Features
+## 🔑 Key Features
 
 - **Share Text Prompts**: Share text prompts and view prompts shared by others.
 - **Like and Unlike Prompts**: Interact with prompts by liking or unliking them.
