@@ -32,9 +32,39 @@
   </a>
 </p>
 
-![PromptCraft Screenshot](/public/assets/images/screenshot.png)
 
-## ✨ Features
+![PromptCraft Screenshot](/gpt-nextjs/public/assets/screenshots/mainpage.png)
+* **Main Page**: This is the main page of PromptCraft where users can browse and discover a feed of recently shared prompts. Users can interact with prompts by liking or unliking them.
+
+![PromptCraft Screenshot](/gpt-nextjs/public/assets/screenshots/mainpagewhenlogedin.png)
+* **Main Page (Logged In)**: When a user is logged in, the main page may have additional features or options tailored to their account. Here, you can see how the user interface adapts to the logged-in state.
+
+![PromptCraft Screenshot](/gpt-nextjs/public/assets/screenshots/togglemainpage.png)
+* **Toggle Main Page**: This screenshot showcases a toggle feature on the main page, allowing users to switch between different views or modes. Provide more details about what these different modes offer.
+
+![PromptCraft Screenshot](/gpt-nextjs/public/assets/screenshots/search.png)
+* **Search Feature**: Users can utilize the search functionality to find prompts based on keywords or specific criteria. Explain how users can use this feature effectively.
+
+![PromptCraft Screenshot](/gpt-nextjs/public/assets/screenshots/tagSearch.png)
+* **Tag Search**: This screenshot demonstrates the tag search feature, where prompts are categorized with relevant topics. Describe how tags work and how they help users discover prompts of interest.
+
+![PromptCraft Screenshot](/gpt-nextjs/public/assets/screenshots/createpage.png)
+* **Create Prompt Page**: Here, users can create and share their own prompts. Walk users through the process of creating and sharing prompts, including adding tags and any other relevant details.
+
+![PromptCraft Screenshot](/gpt-nextjs/public/assets/screenshots/editpage.png)
+* **Edit Prompt Page**: This screenshot shows the interface for editing existing prompts. Explain how users can edit their previously shared prompts and any options available on this page.
+
+![PromptCraft Screenshot](/gpt-nextjs/public/assets/screenshots/profile.png)
+* **User Profile**: Users can access their profile page to view prompts they have shared and manage their account. Provide insights into the features available on the user profile page.
+
+![PromptCraft Screenshot](/gpt-nextjs/public/assets/screenshots/likedprompts.png)
+* **Liked Prompts**: This screenshot illustrates the section where users can view and manage prompts they have liked on the platform. It provides an organized way for users to revisit their favorite prompts, offering a convenient way to stay inspired and engaged with the content they appreciate.
+
+
+
+
+
+## Features
 
 ### 1. Unleash Your Creativity
 
@@ -56,7 +86,7 @@ PromptCraft is backed by a robust MongoDB database, ensuring the security and sc
 
 Tailwind CSS powers a visually stunning and responsive user interface, making your experience on PromptCraft a delight. Whether you're browsing prompts on a desktop, tablet, or smartphone, PromptCraft adapts effortlessly to your device. Enjoy a smooth and visually pleasing interface that enhances your creative journey.
 
-## 🔑 Key Features
+##  Key Features
 
 - **Share Text Prompts**: Share text prompts and view prompts shared by others.
 - **Like and Unlike Prompts**: Interact with prompts by liking or unliking them.
@@ -93,7 +123,7 @@ Share prompts from the navbar or your profile page. Add tags to help categorize 
 - [MongoDB](https://www.mongodb.com/) - Database
 - [NextAuth](https://next-auth.js.org/) - Authentication
 
-## 🛠️ Getting Started
+##  Getting Started
 
 To run PromptCraft locally, follow these simple steps:
 
@@ -103,37 +133,40 @@ To run PromptCraft locally, follow these simple steps:
    git clone https://github.com/mmnsrti/promptcraft.git
    cd promptcraft
 
-
-
-1.Install Dependencies:
-
+2. Install Dependencies:
+```bash
 cd promptcraft
 npm install
+```
 
-2.Configure Environment Variables:
+3. Configure Environment Variables:
 
-3.Create a .env.local file in the project root and add your MongoDB URI and Google OAuth credentials:
+Create a .env.local file in the project root and add your MongoDB URI and Google OAuth credentials:
+```bash
 GOOGLE_ID=
 GOOGLE_CLIENT_SECRET=
 MONGO_URI=
 NEXTAUTH_URL=http://localhost:3000
 NEXTAUTH_URL_INTERNAL=http://localhost:3000
 NEXTAUTH_SECRET=
+```
 
 4.Start the Development Server:
+```bash
 npm run dev
+```
 
 
-## 🛡️ technologies-used
+##  technologies-used
 Next.js: The foundation of our project, delivering a fast and efficient React framework.
 MongoDB: Our database of choice for prompt storage and management.
 Tailwind CSS: A utility-first CSS framework for crafting a stylish and responsive UI.
 
-## 🤝 contributing
+##  contributing
 We enthusiastically welcome contributions from the community! If you're eager to contribute to PromptCraft, please read our Contributing Guidelines.
 
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 Our heartfelt gratitude to the vibrant open-source community for providing the tools and libraries that empower this project.
 Inspired by the limitless creative potential unlocked by AI-generated prompts.
