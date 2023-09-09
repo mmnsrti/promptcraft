@@ -33,31 +33,31 @@
 </p>
 
 
-![PromptCraft Screenshot](/gpt-nextjs/public/assets/screenshots/mainpage.png)
+![PromptCraft Screenshot](/public/assets/screenshots/mainpage.png)
 * **Main Page**: This is the main page of PromptCraft where users can browse and discover a feed of recently shared prompts. Users can interact with prompts by liking or unliking them.
 
-![PromptCraft Screenshot](/gpt-nextjs/public/assets/screenshots/mainpagewhenlogedin.png)
+![PromptCraft Screenshot](/public/assets/screenshots/mainpagewhenlogedin.png)
 * **Main Page (Logged In)**: When a user is logged in, the main page may have additional features or options tailored to their account. Here, you can see how the user interface adapts to the logged-in state.
 
-![PromptCraft Screenshot](/gpt-nextjs/public/assets/screenshots/togglemainpage.png)
+![PromptCraft Screenshot](/public/assets/screenshots/togglemainpage.png)
 * **Toggle Main Page**: This screenshot showcases a toggle feature on the main page, allowing users to switch between different views or modes. Provide more details about what these different modes offer.
 
-![PromptCraft Screenshot](/gpt-nextjs/public/assets/screenshots/search.png)
+![PromptCraft Screenshot](/public/assets/screenshots/search.png)
 * **Search Feature**: Users can utilize the search functionality to find prompts based on keywords or specific criteria. Explain how users can use this feature effectively.
 
-![PromptCraft Screenshot](/gpt-nextjs/public/assets/screenshots/tagSearch.png)
+![PromptCraft Screenshot](/public/assets/screenshots/tagSearch.png)
 * **Tag Search**: This screenshot demonstrates the tag search feature, where prompts are categorized with relevant topics. Describe how tags work and how they help users discover prompts of interest.
 
-![PromptCraft Screenshot](/gpt-nextjs/public/assets/screenshots/createpage.png)
+![PromptCraft Screenshot](/public/assets/screenshots/createpage.png)
 * **Create Prompt Page**: Here, users can create and share their own prompts. Walk users through the process of creating and sharing prompts, including adding tags and any other relevant details.
 
-![PromptCraft Screenshot](/gpt-nextjs/public/assets/screenshots/editpage.png)
+![PromptCraft Screenshot](/public/assets/screenshots/editpage.png)
 * **Edit Prompt Page**: This screenshot shows the interface for editing existing prompts. Explain how users can edit their previously shared prompts and any options available on this page.
 
-![PromptCraft Screenshot](/gpt-nextjs/public/assets/screenshots/profile.png)
+![PromptCraft Screenshot](/public/assets/screenshots/profile.png)
 * **User Profile**: Users can access their profile page to view prompts they have shared and manage their account. Provide insights into the features available on the user profile page.
 
-![PromptCraft Screenshot](/gpt-nextjs/public/assets/screenshots/likedprompts.png)
+![PromptCraft Screenshot](/public/assets/screenshots/likedprompts.png)
 * **Liked Prompts**: This screenshot illustrates the section where users can view and manage prompts they have liked on the platform. It provides an organized way for users to revisit their favorite prompts, offering a convenient way to stay inspired and engaged with the content they appreciate.
 
 
